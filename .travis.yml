@@ -10,28 +10,23 @@ matrix:
     sudo: true
     env: INSTALL_STRING="."
     arch:
-      - amd64
       - arm64
   - python: "3.8"
     dist: xenial
     sudo: true
     arch:
-      - amd64
       - arm64
   - python: "3.7"
     dist: xenial
     sudo: true
     arch:
-      - amd64
       - arm64
   - python: "3.6"
     arch:
-      - amd64
       - arm64
   - python: "2.7"
     env: TEST_TYPE=prcheck-py2
     arch:
-      - amd64
       - arm64
 install:
   - pip install -r requirements-dev.txt -r requirements-docs.txt
