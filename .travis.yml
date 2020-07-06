@@ -26,3 +26,4 @@ script:
   - make $TEST_TYPE
 after_success:
   - if [[ $TEST_TYPE == 'prcheck-py2' ]]; then pip install codecov==2.0.5 && codecov; fi
+
