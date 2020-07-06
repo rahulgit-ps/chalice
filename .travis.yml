@@ -29,6 +29,9 @@ matrix:
     arch:
       - arm64
 install:
+  - if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
+     sudo chown -Rv $USER:$GROUP ~/.cache/pip/wheels;
+    fi
   - pip install -r requirements-dev.txt -r requirements-docs.txt
   - pip install -e "$INSTALL_STRING"
 script:
